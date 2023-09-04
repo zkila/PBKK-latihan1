@@ -57,7 +57,9 @@ namespace calculator
         {
             int nilai1 = int.Parse(textBox1.Text);
             int nilai2 = int.Parse(textBox2.Text);
-            int hasil = nilai1 / nilai2;
+            int hasil = 0;
+            if(nilai2 != 0) hasil = nilai1 / nilai2;
+            else MessageBox.Show("Pembagi tidak boleh 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             textBox3.Text = hasil.ToString();
         }
     }
